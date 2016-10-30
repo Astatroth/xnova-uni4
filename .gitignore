@@ -1,0 +1,13 @@
+.idea/*
+vendor/*
+Thumbs.db
+.DS_Store
+*.log
+*.txt
+*.map
+
+cache/*
+images/avatars/upload/*
+includes/environment/*
+logs/*
+skins/new/*

@@ -1,0 +1,6 @@
+<Files statupd.php>
+Allow from all
+</Files>
+<Files fleet_handler.php>
+Deny from all
+</Files>

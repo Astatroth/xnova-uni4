@@ -1,0 +1,10 @@
+<tr><th>Атакующий потерял <?=strings::pretty_number($this->getTotalAttackersLostUnits()); ?> единиц.</th></tr>
+<tr><th>Обороняющийся потерял <?=strings::pretty_number($this->getTotalDefendersLostUnits()); ?> единиц.</th></tr>
+<?php $debris = $this->getDebris(); ?>
+<tr><td class='c'>Поле обломков: <?=strings::pretty_number($debris[0]); ?> металла и <?=strings::pretty_number($debris[1]); ?> кристалла.</td></tr>
+<tr><th>Шанс появления луны составляет <?php echo $this->getMoonProb(); ?> %.<br />
+<?php $moon = $this->tryMoon(); ?>
+<?php if ($moon !== false) { ?>
+    A moon orbit near your planet<br />
+<?php } ?>
+</th></tr>

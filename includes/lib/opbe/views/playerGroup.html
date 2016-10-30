@@ -1,0 +1,43 @@
+<?php foreach($_playerGroup as $_id => $_player) { ?>
+    <? foreach ($_player as $_idFleet => $_fleet): ?>
+        <td class='c'>
+            <table border=1 width=100%>
+                <tr>
+                    <th>
+                        <center>
+                            <?php echo $_st; ?>
+                            <?php echo $_fleet->getName(); ?>
+
+                            <table border=1>
+                                <tr>
+                                    <th>Тип</th>
+                                    <?php foreach($_fleet as $_shipID => $_ship) { ?>
+                                        <th><?php echo $_shipID; ?></th>
+                                    <?php } ?>
+                                </tr>
+                                <tr>
+                                    <th>Кол-во</th>
+                                    <?php foreach($_fleet as $_shipID => $_ship) { ?>
+                                        <th><?php echo $_ship->getCount(); ?></th>
+                                    <?php } ?>
+                                </tr>
+                                <tr>
+                                    <th>Вооружение</th>
+                                    <?php foreach($_fleet as $_shipID => $_ship) { ?>
+                                        <th><?php echo $_ship->getPower(); ?></th>
+                                    <?php } ?>
+                                </tr>
+                                <tr>
+                                    <th>Броня</th>
+                                    <?php foreach($_fleet as $_shipID => $_ship) { ?>
+                                        <th><?php echo $_ship->getHull(); ?></th>
+                                    <?php } ?>
+                                </tr>
+                            </table>
+                        </center>
+                    </th>
+                </tr>
+            </table>
+        </td>
+    <? endforeach; ?>
+<?php } ?>

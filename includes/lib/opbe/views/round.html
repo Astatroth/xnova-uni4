@@ -1,0 +1,13 @@
+<center><font size=4>Раунд <?php echo $_i ?></font></center>
+<table width=100%>
+    <tr>
+        <?php $_st = 'Атакующий'; $_playerGroup =  $_round->getAfterBattleAttackers(); include('playerGroup.html');?>
+    </tr>
+</table>
+<table width=100%>
+    <tr>
+        <?php $_st = 'Защитник'; $_playerGroup =  $_round->getAfterBattleDefenders(); include('playerGroup.html');?>
+    </tr>
+</table>
+<?php include('round_info.html'); ?>
+<hr>
